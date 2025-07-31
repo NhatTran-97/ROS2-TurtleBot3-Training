@@ -1,0 +1,45 @@
+export TURTLEBOT3_MODEL=burger
+
+
+ssh turtlebot-3@192.168.68.56
+pwd 123456
+
+ros2 launch turtlebot3_bringup robot.launch.py
+
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+
+ros2 daemon stop
+ros2 daemon start
+
+
+ros2 multicast send
+ros2 multicast receive
+
+https://nav2-training-image.s3.ap-southeast-1.amazonaws.com/practice-3/teleop.py
+
+ros2 launch camera_calibra
+
+
+pip install "numpy<2"
+
+ros2 launch came
+
+kill -9 PID
+
+
+velocities of robot:   -0.22 - 0.22
+
+| **Tính chất** | **Reliability (Độ tin cậy)**                                | **Durability (Độ bền)**                                                                   |
+| ------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| **Mục đích**  | Đảm bảo thông điệp được gửi và nhận chính xác               | Đảm bảo thông điệp không bị mất khi subscriber không kết nối                              |
+| **Chế độ**    | **Reliable** (Tin cậy) và **Best Effort** (Tốt nhất có thể) | **Transient Local** (Địa phương tạm thời) và **Volatile** (Biến động)                     |
+| **Tính năng** | Đảm bảo rằng tin nhắn được gửi thành công, không bị mất     | Lưu trữ thông điệp cho đến khi subscriber kết nối và nhận được                            |
+| **Sử dụng**   | Khi bạn muốn dữ liệu được đảm bảo không bị mất mát          | Khi bạn muốn dữ liệu không bị mất, ngay cả khi subscriber không kết nối tại thời điểm gửi |
+
+
+
+ros2 interface list | grep nav_msgs
+ros2 interface list
