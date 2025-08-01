@@ -1,19 +1,17 @@
 export TURTLEBOT3_MODEL=burger
 
-
 ssh turtlebot-3@192.168.68.56
+ssh turtlebot-3@192.168.103.102
 pwd 123456
 
 ros2 launch turtlebot3_bringup robot.launch.py
-
+ros2 launch camera_calibration_pkg camera_calibration.launch.py
+ros2 launch 
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
-
 
 ros2 daemon stop
 ros2 daemon start
-
 
 ros2 multicast send
 ros2 multicast receive
@@ -22,13 +20,9 @@ https://nav2-training-image.s3.ap-southeast-1.amazonaws.com/practice-3/teleop.py
 
 ros2 launch camera_calibra
 
-
 pip install "numpy<2"
-
 ros2 launch came
-
 kill -9 PID
-
 
 velocities of robot:   -0.22 - 0.22
 
@@ -39,7 +33,22 @@ velocities of robot:   -0.22 - 0.22
 | **Tính năng** | Đảm bảo rằng tin nhắn được gửi thành công, không bị mất     | Lưu trữ thông điệp cho đến khi subscriber kết nối và nhận được                            |
 | **Sử dụng**   | Khi bạn muốn dữ liệu được đảm bảo không bị mất mát          | Khi bạn muốn dữ liệu không bị mất, ngay cả khi subscriber không kết nối tại thời điểm gửi |
 
-
-
 ros2 interface list | grep nav_msgs
 ros2 interface list
+
+
+ros2 service list 
+ros2 service call <service_name> <service_type> <value>
+ros2 service info <service name>
+
+
+
+
+
+# Request 
+bool temp
+---
+
+# Response 
+bool result 
+geometry_msgs/Pose object_pose 

@@ -36,7 +36,7 @@ add_executable(custom_send_twist_msg_node src/custom_send_twist_msg.cpp)
 ament_target_dependencies(custom_send_twist_msg_node rclcpp sensor_msgs rosi_msgs geometry_msgs)
 
 add_executable(custom_control_robot_node src/custom_control_robot.cpp)
-ament_target_dependencies(custom_sub_robot_node rclcpp sensor_msgs rosi_msgs geometry_msgs)
+ament_target_dependencies(custom_control_robot_node rclcpp sensor_msgs rosi_msgs geometry_msgs)
 
 
 install(TARGETS 

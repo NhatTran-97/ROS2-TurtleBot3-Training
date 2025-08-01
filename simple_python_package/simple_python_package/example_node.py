@@ -15,9 +15,9 @@ class DemoNode(Node):
             reliability=QoSReliabilityPolicy.RELIABLE, durability=QoSDurabilityPolicy.TRANSIENT_LOCAL,  history=QoSHistoryPolicy.KEEP_LAST, depth=10)
 
         self.reentrant_group = ReentrantCallbackGroup()
-        self.exclusive_group = MutuallyExclusiveCallbackGroup()
-        self.timer_1 = self.create_timer(0.5, self.timer_callback_1, callback_group=self.reentrant_group)
-        self.timer_2 = self.create_timer(1.0, self.timer_callback_2, callback_group=self.reentrant_group)
+        self.exclusive_group = MutuallyExclusiveCallbackGroup()  #callback_group=self.reentrant_group
+        self.timer_1 = self.create_timer(0.5, self.timer_callback_1 )
+        self.timer_2 = self.create_timer(1.0, self.timer_callback_2)
 
         self.counter = 0
 

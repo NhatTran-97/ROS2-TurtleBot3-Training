@@ -25,6 +25,8 @@ setup(
             'example_node = simple_python_package.example_node:main',
             'teleop_node = simple_python_package.teleop:main',
             'image_subscriber_node = simple_python_package.image_subscriber:main',
+            'publish_image = simple_python_package.publish_camera:main',
+            'aruco_detection_node = simple_python_package.aruco_detection_node:main',
         ],
     },
 )

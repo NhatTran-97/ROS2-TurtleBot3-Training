@@ -12,15 +12,14 @@ import cv2
 
 class ImageSubscriber(Node):
     def __init__(self):
-        super().__init__('image_publisher_node')
-
+        super().__init__('image_subscriber_node') 
         self.bridge = CvBridge()
 
         self.reentrant_group = ReentrantCallbackGroup()
         self.sub = self.create_subscription(Image, '/image_raw', self.image_callback, 10, callback_group=self.reentrant_group)
 
     def image_callback(self, msg):
-        ret ,frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+        frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         cv2.imshow("frame", frame)
         cv2.waitKey(1)
 

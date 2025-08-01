@@ -10,7 +10,7 @@ class CustomSendTwistMsg : public rclcpp::Node
 public:
     CustomSendTwistMsg() : Node("custom_send_twist_msg")
     {
-        pub_cmd_ = this->create_publisher<rosi_msgs::msg::SimpleVelocity>("/cmd_vel", 10);
+        pub_cmd_ = this->create_publisher<rosi_msgs::msg::SimpleVelocity>("/simple_vel", 10);
         timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&CustomSendTwistMsg::timer_callback, this));
     }
 
