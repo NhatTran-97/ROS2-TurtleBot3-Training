@@ -3,17 +3,12 @@ from rclpy.node import Node
 from bumperbot_msgs.srv import AddTwoInts
 import sys 
 
-
-
 class SimpleServiceClient(Node):
     def __init__(self):
         super().__init__("simple_service_client")
         self.client_ = self.create_client(AddTwoInts, "add_two_ints")
-        
-     
 
         while not self.client_.wait_for_service(timeout_sec=1.0):  # wait for service function, 
-
             self.get_logger().info("Service not available, waiting again...")
         
         self.req_ = AddTwoInts.Request() # message type

@@ -43,15 +43,6 @@ class TeleopKeyboard(Node):
         self.timer = self.create_timer(1.0, self.timer_callback) 
         self.cmd_msg = Twist()
 
-        #------------------------------------------------
-        #                    TODO:
-        #  Create your publisher here! Remember to check
-        #  what is the publisher type you need.
-        #  Once you have completed creating your publisher,
-        #  Initialise a twist message and call it self.cmd_msg
-        #------------------------------------------------
-
-        #-------- A Timer is created here every 0.1s, the timer_callback() function will be called. ---------
         print(INSTRUCTIONS)
 
     def timer_callback(self):
@@ -76,15 +67,6 @@ class TeleopKeyboard(Node):
             self.cmd_msg.angular.z = 0.0
             self.get_logger().info("Stopping robot.")
         self.publisher_.publish(self.cmd_msg)
-
-        #-------------------------------------------------
-        #                    TODO:
-        #          Write your code here!
-        #          Now you have the keyboard input from the 
-        #          User, what do you do with it?
-
-
-#-------------------------------------------------
 
 def main(args=None):
     rclpy.init(args=args)

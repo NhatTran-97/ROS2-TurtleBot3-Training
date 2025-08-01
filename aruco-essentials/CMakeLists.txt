@@ -13,25 +13,7 @@ find_package(tf2_geometry_msgs REQUIRED)
 find_package(marker_msgs REQUIRED)
 
 # --- C++ Executable ---
-# add_executable(realsense_aruco_node src/realsense_aruco_node.cpp)
 add_executable(logi_aruco_node src/logitech_node.cpp)
-
-# ament_target_dependencies(realsense_aruco_node
-#   rclcpp
-#   geometry_msgs
-#   visualization_msgs
-#   OpenCV
-#   realsense2
-#   tf2
-#   tf2_geometry_msgs
-# )
-
-# target_link_libraries(realsense_aruco_node
-#   realsense2::realsense2
-#   ${geometry_msgs_TARGETS}
-#   ${marker_msgs_TARGETS}
-#   ${std_msgs_TARGETS}
-# )
 
 ament_target_dependencies(logi_aruco_node
   rclcpp

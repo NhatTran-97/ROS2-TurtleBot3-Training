@@ -1,4 +1,0 @@
-string start_node
-string goal_node
----
-string status # Options: "in_process", "reversing", "not_complete", "complete"

@@ -1,0 +1,10 @@
+# Goal
+string start_node
+string goal_node
+---
+# Result
+bool success
+string final_node
+---
+# Feedback
+string current_node

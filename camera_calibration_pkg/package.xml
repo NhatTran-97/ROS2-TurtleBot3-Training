@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>camera_calibration_pkg</name>
+  <version>0.7.3</version>
+  <description>A ROS2 Python package Aruco Marker Tracking</description>
+
+  <maintainer email="adriel_ho@artc.a-star.edu.sg">Adriel Ho</maintainer>
+  <maintainer email="shabashkhan@artc.a-star.edu.sg">Shalman Khan</maintainer>
+  <license>Apache License 2.0</license>
+
+  <!-- Add Executable Dependency Here -->
+  <!-- Edit Here -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+
+
+  <!-- These test dependencies are optional
+  Their purpose is to make sure that the code passes the linters -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
