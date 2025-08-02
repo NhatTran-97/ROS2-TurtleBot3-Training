@@ -53,6 +53,7 @@ private:
     };
 };
 
+
 USBCameraArucoNode::USBCameraArucoNode(): Node("usb_aruco_node"),
   tf_buffer_(this->get_clock()), tf_listener_(tf_buffer_)
 {

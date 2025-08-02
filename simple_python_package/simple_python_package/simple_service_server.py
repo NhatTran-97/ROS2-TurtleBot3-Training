@@ -3,7 +3,7 @@ from rclpy.node import Node
 
 from bumperbot_msgs.srv import AddTwoInts
 
-from rosi_msgs.srv import GetObjectLocation
+from perception_msgs.srv import GetObjectLocation
 
 class SimpleServiceServer(Node):
     def __init__(self):

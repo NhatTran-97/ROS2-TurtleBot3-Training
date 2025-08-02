@@ -1,7 +1,7 @@
 
 import rclpy
 from rclpy.node import Node
-from rosi_msgs.msg import SimpleVelocity
+from simple_velocity_msg.msg import SimpleVelocity
 from geometry_msgs.msg import Twist
 class MyPublisher(Node):
 

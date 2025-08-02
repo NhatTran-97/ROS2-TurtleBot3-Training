@@ -1,6 +1,6 @@
 from visualization_msgs.msg import Marker
 from geometry_msgs.msg import PoseArray, Pose
-from rosi_msgs.srv import GetObjectLocation
+from perception_msgs.srv import GetObjectLocation
 import rclpy
 from rclpy.node import Node
 

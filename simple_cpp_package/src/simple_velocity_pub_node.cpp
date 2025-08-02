@@ -1,5 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
-#include "rosi_msgs/msg/simple_velocity.hpp"
+#include "simple_velocity_msg/msg/simple_velocity.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 
 class SimpleVelocity : public rclcpp::Node
@@ -7,14 +7,14 @@ class SimpleVelocity : public rclcpp::Node
 public:
     SimpleVelocity() : Node("simple_velocity_pub_node")
     {
-        pub_velocity_ = this->create_publisher<rosi_msgs::msg::SimpleVelocity>("/simple_vel", 10);
+        pub_velocity_ = this->create_publisher<simple_velocity_msg::msg::SimpleVelocity>("/simple_vel", 10);
         sub_vel_ = this->create_subscription<geometry_msgs::msg::Twist>("/cmd_vel", 10, std::bind(&SimpleVelocity::listener_callback, this, std::placeholders::_1));
         timer_ = this->create_wall_timer(std::chrono::seconds(1), std::bind(&SimpleVelocity::timer_callback, this));
         twist_msg_ = geometry_msgs::msg::Twist();
     }
 
 private:
-    rclcpp::Publisher<rosi_msgs::msg::SimpleVelocity>::SharedPtr pub_velocity_;
+    rclcpp::Publisher<simple_velocity_msg::msg::SimpleVelocity>::SharedPtr pub_velocity_;
     rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub_vel_;
     rclcpp::TimerBase::SharedPtr timer_;
     geometry_msgs::msg::Twist twist_msg_;
@@ -26,7 +26,7 @@ private:
 
     void timer_callback()
     {
-        auto msg = rosi_msgs::msg::SimpleVelocity();
+        auto msg = simple_velocity_msg::msg::SimpleVelocity();
         msg.linear_velocity = twist_msg_.linear.x;
         msg.angular_velocity = twist_msg_.angular.z;
 

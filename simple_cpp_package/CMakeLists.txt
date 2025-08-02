@@ -14,7 +14,7 @@ find_package(nav_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)   
 find_package(image_transport REQUIRED) 
-find_package(rosi_msgs REQUIRED)
+find_package(simple_velocity_msg REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(OpenCV REQUIRED)
 
@@ -33,10 +33,10 @@ ament_target_dependencies(image_subscriber_node rclcpp sensor_msgs cv_bridge Ope
 
 
 add_executable(custom_send_twist_msg_node src/custom_send_twist_msg.cpp)
-ament_target_dependencies(custom_send_twist_msg_node rclcpp sensor_msgs rosi_msgs geometry_msgs)
+ament_target_dependencies(custom_send_twist_msg_node rclcpp sensor_msgs simple_velocity_msg geometry_msgs)
 
 add_executable(custom_control_robot_node src/custom_control_robot.cpp)
-ament_target_dependencies(custom_control_robot_node rclcpp sensor_msgs rosi_msgs geometry_msgs)
+ament_target_dependencies(custom_control_robot_node rclcpp sensor_msgs simple_velocity_msg geometry_msgs)
 
 
 install(TARGETS 
