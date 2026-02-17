@@ -28,9 +28,23 @@ By the end of this course, I gained hands-on experience with ROS2 in a real-worl
   
 ## 📌 Project Demo
 
-| Demo Video | Project Image |
-|------------|--------------|
-| [![Watch Demo](https://img.youtube.com/vi/-M7dJLnuSJE/0.jpg)](https://www.youtube.com/watch?v=-M7dJLnuSJE) | ![Project Image](assets/image/_EIU9360.jpg) |
+<table>
+<tr>
+<td align="center" width="50%">
+<a href="https://www.youtube.com/watch?v=-M7dJLnuSJE">
+<img src="https://img.youtube.com/vi/-M7dJLnuSJE/0.jpg" width="500">
+</a>
+<br>
+<b>Demo Video</b>
+</td>
+
+<td align="center" width="50%">
+<img src="assets/image/_EIU9360.jpg" width="500">
+<br>
+<b>Project Image</b>
+</td>
+</tr>
+</table>
 
 
 ## Conclusion
