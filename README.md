@@ -25,6 +25,13 @@ By the end of this course, I gained hands-on experience with ROS2 in a real-worl
 - Code examples of ROS2 nodes, topics, and services.
 - Launch files and configurations used in the course.
 - Practical applications on the TurtleBot3 robot using ROS2.
+  
+## 📌 Project Demo
+
+| Demo Video | Project Image |
+|------------|--------------|
+| [![Watch Demo](https://img.youtube.com/vi/-M7dJLnuSJE/0.jpg)](https://www.youtube.com/watch?v=-M7dJLnuSJE) | ![Project Image](assets/image/_EIU9360.jpg) |
+
 
 ## Conclusion
 
